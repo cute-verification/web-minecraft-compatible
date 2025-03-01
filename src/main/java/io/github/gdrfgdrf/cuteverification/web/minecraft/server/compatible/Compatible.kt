@@ -3,6 +3,7 @@ package io.github.gdrfgdrf.cuteverification.web.minecraft.server.compatible
 import io.github.gdrfgdrf.cuteverification.web.mediator.WebMediator
 import io.github.gdrfgdrf.cuteverification.web.mediator.utils.json.Jsons
 import io.github.gdrfgdrf.cuteverification.web.minecraft.server.compatible.config.Config
+import io.github.gdrfgdrf.cuteverification.web.minecraft.server.compatible.timers.UserTimeoutTimer
 import java.io.BufferedOutputStream
 import java.io.BufferedWriter
 import java.io.File
@@ -27,6 +28,7 @@ object Compatible {
             throw IllegalArgumentException("the config is invalid, maybe url, username or password is null")
         }
         config!!.fulfill()
+        UserTimeoutTimer.start()
 
         WebMediator.start(
             config!!.url!!,
