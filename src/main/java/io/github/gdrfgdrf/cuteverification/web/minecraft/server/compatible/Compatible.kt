@@ -42,6 +42,7 @@ object Compatible {
         if (!file.exists()) {
             file.createNewFile()
             val config = Config()
+            config.fulfill()
 
             val writer = BufferedWriter(OutputStreamWriter(FileOutputStream(file), Charsets.UTF_8))
             writer.write(Jsons.write(config))
