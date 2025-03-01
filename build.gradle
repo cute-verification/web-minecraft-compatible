@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm'
+    id 'maven-publish'
 }
 
 group = 'io.github.gdrfgdrf.cuteverification'
@@ -24,4 +25,12 @@ test {
 }
 kotlin {
     jvmToolchain(8)
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
 }
