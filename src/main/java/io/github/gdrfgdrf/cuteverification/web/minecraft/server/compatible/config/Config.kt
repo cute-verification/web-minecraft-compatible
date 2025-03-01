@@ -14,6 +14,10 @@ data class Config(
         return !url.isNullOrBlank() && !username.isNullOrBlank() && !password.isNullOrBlank()
     }
 
-
+    fun fulfill() {
+        if (identificationTimeout == null) {
+            identificationTimeout = 5000
+        }
+    }
 
 }
