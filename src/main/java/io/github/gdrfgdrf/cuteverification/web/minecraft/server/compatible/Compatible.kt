@@ -46,6 +46,7 @@ object Compatible {
 
             val writer = BufferedWriter(OutputStreamWriter(FileOutputStream(file), Charsets.UTF_8))
             writer.write(Jsons.write(config))
+            writer.close()
         }
     }
 }
