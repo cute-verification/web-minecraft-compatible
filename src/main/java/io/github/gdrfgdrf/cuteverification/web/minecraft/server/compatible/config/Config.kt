@@ -1,5 +1,6 @@
 package io.github.gdrfgdrf.cuteverification.web.minecraft.server.compatible.config
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
 
@@ -11,6 +12,7 @@ class Config {
     @JsonProperty("identification-timeout")
     var identificationTimeout: Long? = null
 
+    @JsonIgnore
     fun isValid(): Boolean {
         return !url.isNullOrBlank() && !username.isNullOrBlank() && !password.isNullOrBlank()
     }
