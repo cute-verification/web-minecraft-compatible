@@ -1,8 +1,8 @@
 package io.github.gdrfgdrf.cuteverification.web.minecraft.server.compatible.events
 
+import io.github.gdrfgdrf.cuteverification.web.mediator.enums.IdentificationPlatforms
 import io.github.gdrfgdrf.cuteverification.web.mediator.event.user.UserJoinEvent
 import io.github.gdrfgdrf.cuteverification.web.minecraft.server.compatible.Compatible
-import io.github.gdrfgdrf.cuteverification.web.minecraft.server.compatible.enums.IdentificationPlatforms
 import io.github.gdrfgdrf.cuteverification.web.minecraft.server.compatible.timers.UserTimeoutTimer
 
 object UserJoin {
