@@ -6,6 +6,7 @@ import io.github.gdrfgdrf.cuteverification.web.minecraft.server.compatible.Compa
 import io.github.gdrfgdrf.cuteverification.web.minecraft.server.compatible.config.Config
 import io.github.gdrfgdrf.cuteverification.web.minecraft.server.compatible.events.BaseEventListener
 import io.github.gdrfgdrf.cuteverification.web.minecraft.server.compatible.events.UserTimeoutEvent
+import java.lang.Thread.sleep
 import java.util.concurrent.ConcurrentHashMap
 
 object UserTimeoutTimer {
@@ -44,6 +45,7 @@ object UserTimeoutTimer {
                     UserTimeoutEvent.main(username).post()
                 }
 
+                sleep(100)
             }
         }
 
